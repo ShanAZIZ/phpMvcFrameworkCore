@@ -1,0 +1,15 @@
+{
+    "name": "shan/php-mvc-core",
+    "authors": [
+        {
+            "name": "Shan AZIZ",
+            "email": "shan.azizh@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "shan\\mvcPhpCore\\": "./"
+        }
+    },
+    "require": {}
+}
