@@ -1,5 +1,5 @@
 <?php 
-namespace app\core;
+namespace shan\mvcPhpCore;
 
 class Response{
     public function setStatusCode(int $code)

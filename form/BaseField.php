@@ -1,10 +1,10 @@
 <?php
 
 
-namespace app\core\form;
+namespace shan\mvcPhpCore\form;
 
 
-use app\core\Model;
+use shan\mvcPhpCore\Model;
 
 abstract class BaseField
 {

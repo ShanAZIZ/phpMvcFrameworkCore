@@ -1,7 +1,7 @@
 <?php
 
-namespace app\core;
-use app\core\exception\NotFoundException;
+namespace shan\mvcPhpCore;
+use shan\mvcPhpCore\exception\NotFoundException;
 class Router
 {
     /*
@@ -44,7 +44,7 @@ class Router
             return Application::$app->view->renderView($callback);
         }
         if(is_array($callback)){
-            /** @var \app\core\Controller $controller */
+            /** @var \shan\mvcPhpCore\Controller $controller */
             $controller = new $callback[0]();
             Application::$app->controller = $controller;
             $controller->actions = $callback[1];

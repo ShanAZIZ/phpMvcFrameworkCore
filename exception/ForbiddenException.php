@@ -1,7 +1,7 @@
 <?php
 
 
-namespace app\core\exception;
+namespace shan\mvcPhpCore\exception;
 
 
 class ForbiddenException extends \Exception

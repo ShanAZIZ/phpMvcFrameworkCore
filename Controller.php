@@ -1,6 +1,6 @@
 <?php
 
-namespace app\core;
+namespace shan\mvcPhpCore;
 
 class Controller
 {
@@ -8,7 +8,7 @@ class Controller
     public string $actions = '';
 
     /**
-     * @var \app\core\middlewares\BaseMiddleware[] $middlewares
+     * @var \shan\mvcPhpCore\middlewares\BaseMiddleware[] $middlewares
      */
     protected array $middlewares = [];
 

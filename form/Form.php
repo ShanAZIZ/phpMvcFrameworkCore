@@ -1,7 +1,7 @@
 <?php
 
-namespace app\core\form;
-use app\core\Model;
+namespace shan\mvcPhpCore\form;
+use shan\mvcPhpCore\Model;
 
 class Form
 {

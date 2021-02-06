@@ -1,10 +1,10 @@
 <?php
 
 
-namespace app\core\form;
+namespace shan\mvcPhpCore\form;
 
 
-abstract class UserModel extends \app\core\DbModel
+abstract class UserModel extends \shan\mvcPhpCore\DbModel
 {
 
     abstract public function getDisplayName(): string;

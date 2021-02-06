@@ -1,6 +1,6 @@
 <?php
 
-namespace app\core;
+namespace shan\mvcPhpCore;
 use app\models\User;
 
 abstract class Model

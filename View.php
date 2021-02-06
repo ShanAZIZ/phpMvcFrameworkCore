@@ -1,7 +1,7 @@
 <?php
 
 
-namespace app\core;
+namespace shan\mvcPhpCore;
 
 
 class View
