@@ -11,6 +11,11 @@ class Application
  */
 
 {
+
+    const EVENT_BEFORE_REQUEST = 'beforeRequest';
+    const EVENT_AFTER_REQUEST = 'afterRequest';
+
+    protected array $eventListeners = [];
     public static string $ROOT_DIR;
 
     public string $layout = 'main';
@@ -50,6 +55,8 @@ class Application
     public function run()
     {
         //Au depart de l'application on resout l'url avec la methode resolve (Grace a la classe router)
+        $this->triggerEvent(self::EVENT_BEFORE_REQUEST);
+
         try{
             echo $this->router->resolve();
         }catch (\Exception $e) {
@@ -83,11 +90,23 @@ class Application
         $this->session->set('user', $primaryKey);
         return true;
     }
+    public function triggerEvent($eventName)
+    {
+        $callbacks = $this->eventListeners[$eventName] ?? [];
+        foreach ($callbacks as $callback){
+            call_user_func($callback);
+        }
+    }
+
 
     public function logout()
     {
         $this->user =null;
         $this->session->remove('user');
+    }
+
+    public function on($eventName, $callback){
+        $this->eventListeners[$eventName][] = $callback;
     }
 
 }
